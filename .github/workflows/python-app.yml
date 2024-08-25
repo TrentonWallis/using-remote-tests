@@ -27,7 +27,7 @@ jobs:
       uses: actions/checkout@master
       with:
         repository: trentonwallis/remote-tests
-        token: ${{secrets.repo_pat}}
+        token: ${{secrets.repo_testing_pat}}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
