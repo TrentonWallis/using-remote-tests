@@ -30,6 +30,7 @@ jobs:
         token: ${{secrets.REMOTE_TESTING_PAT}}
     - name: figure out where I am
       run: |
+        ls
         cd ..
         ls
     - name: Install dependencies
