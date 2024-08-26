@@ -30,6 +30,7 @@ jobs:
         token: ${{secrets.REMOTE_TESTING_PAT}}
     - name: Install dependencies
       run: |
+        ls
         cp ./hw.py ./remote-tests/trenton_testing/hw.py
         python -m pip install --upgrade pip
         pip install -e .
