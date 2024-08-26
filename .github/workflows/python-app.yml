@@ -28,11 +28,12 @@ jobs:
       with:
         repository: trentonwallis/remote-tests
         token: ${{secrets.REMOTE_TESTING_PAT}}
-    - name: Install dependencies
+    - name: figure out where I am
       run: |
-        ls
         cd ..
         ls
+    - name: Install dependencies
+      run: |
         cp ../hw.py ./trenton_testing/hw.py
         python -m pip install --upgrade pip
         pip install -e .
