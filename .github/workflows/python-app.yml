@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Clone test repo
-      uses: trentonwallis/remote-tests@v2.3
+      uses: trentonwallis/remote-tests
       with:
         owner: 'trentonwallis'
         repository: 'trentonwallis/remote-tests'
