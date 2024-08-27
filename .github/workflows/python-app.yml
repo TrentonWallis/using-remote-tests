@@ -23,7 +23,7 @@ jobs:
       with:
         repository: trentonwallis/remote-tests
         token: ${{secrets.REMOTE_TESTING_PAT}}
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@master
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
