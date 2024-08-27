@@ -18,21 +18,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
     - name: Clone test repo
       uses: actions/checkout@master
       with:
         repository: trentonwallis/remote-tests
         token: ${{secrets.REMOTE_TESTING_PAT}}
-    - name: figure out where I am
-      run: |
-        ls
-        cd ..
-        ls
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
     - name: Install dependencies
       run: |
         cp ../hw.py ./trenton_testing/hw.py
