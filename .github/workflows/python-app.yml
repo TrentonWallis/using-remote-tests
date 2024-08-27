@@ -19,9 +19,10 @@ jobs:
 
     steps:
     - name: Clone test repo
-      uses: actions/checkout@main
+      uses: trentonwallis/clone-github-repo-action@v2.3
       with:
-        repository: trentonwallis/remote-tests
+        owner: 'trentonwallis'
+        repository: 'trentonwallis/remote-tests'
         token: ${{secrets.REMOTE_TESTING_PAT}}
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
@@ -30,7 +31,6 @@ jobs:
     - name: Install dependencies
       run: |
         ls
-        cd ..
         ls
         cp ./hw.py ./trenton_testing/hw.py
         python -m pip install --upgrade pip
