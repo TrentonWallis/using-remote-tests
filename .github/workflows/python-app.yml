@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Clone test repo
-      uses: actions/checkout@master
+      uses: actions/checkout@main
       with:
         repository: trentonwallis/remote-tests
         token: ${{secrets.REMOTE_TESTING_PAT}}
