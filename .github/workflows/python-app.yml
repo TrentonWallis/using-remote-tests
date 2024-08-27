@@ -22,7 +22,7 @@ jobs:
       uses: GuillaumeFalourd/clone-github-repo-action@v2.3
       with:
         owner: 'trentonwallis'
-        repository: 'trentonwallis/remote-tests'
+        repository: 'remote-tests'
         token: ${{secrets.REMOTE_TESTING_PAT}}
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
